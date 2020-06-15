@@ -38,7 +38,7 @@ pipeline {
     }
 	
 		stage('Trigger process in UcDeploy'){
-			 step([$class: 'UCDeployPublisher',
+			 steps([$class: 'UCDeployPublisher',
         siteName: '35.242.161.163',
         component: [
             $class: 'com.urbancode.jenkins.plugins.ucdeploy.VersionHelper$VersionBlock',
