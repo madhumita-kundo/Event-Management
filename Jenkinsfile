@@ -9,7 +9,7 @@ pipeline {
 		stage('compile'){
 			steps {
 				sh 'python -m py_compile sources/app.py' 
-        stash(name: 'compiled-results', includes: 'sources/*.py*') '
+                                stash(name: 'compiled-results', includes: 'sources/*.py*')
 				}
 		}
     		stage('test'){
